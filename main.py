@@ -24,13 +24,13 @@ while True:
         file2 = input("Enter file2 path: ")
         print(verify_integrity(file1,file2))
     elif choice == "3":
-        message = input("Enter message: ").encode()
+        message = input("Enter message: ")
         key, ciphertext, plaintext = aes_ed(message)
         print("AES Key: ",key)
         print("AES Ciphertext: ",ciphertext)
         print("AES Plaintext: ",plaintext)
     elif choice == "4":
-        message = input("Enter message: ").encode()
+        message = input("Enter message: ")
         ciphertext, plaintext = rsa_ed(message)
         print("RSA message, encrypted with a public key: ",ciphertext)
         print("RSA message, decrypted with a private key: ",plaintext)
