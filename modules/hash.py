@@ -19,9 +19,11 @@ def verify_integrity(file1,file2):
     hash1 = hash_file(file1)
     hash2 = hash_file(file2)
     if hash1 == hash2:
-        print("File is intact")
+        return "File is intact"
     else:
-        print("File is corrupted")
+        return "File is corrupted"
 
 if __name__ == "__main__":
     print("SHA256 hash of the file is: ", hash_file("samples/sample.txt"))
+    print(verify_integrity("samples/1.webp","samples/2.webp"))
+    print(verify_integrity("samples/1.webp","samples/3.webp"))
